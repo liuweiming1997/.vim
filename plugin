@@ -1,0 +1,13 @@
+
+
+if &compatible
+  set nocompatible
+end
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#rc()
+
+Bundle "scrooloose/nerdcommenter"
+
+filetype on
