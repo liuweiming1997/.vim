@@ -1,7 +1,3 @@
-" Use Vim settings, rather then Vi settings. This setting must be as early as
-" possible, as it has side effects.
-set nocompatible
-
 " Highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
@@ -20,7 +16,6 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-set confirm       " Need confrimation while exit
 set fileencodings=utf-8,gb18030,gbk,big5
 
 
@@ -66,5 +61,21 @@ set numberwidth=5
 set splitbelow
 set splitright
 
-" vimi config..................... test
+
+
+
+" vimi config..................... 
 syntax on
+
+" Use Vim settings, rather then Vi settings. This setting must be as early as
+" possible, as it has side effects.
+" 插件管理器
+if filereadable(expand("~/.vim/plugin"))
+    source ~/.vim/plugin
+endif
+filetype plugin indent on
+" 插件管理器
+
+
+map <F2> :NERDTreeToggle<CR>
+
