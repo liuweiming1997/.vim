@@ -10,5 +10,6 @@ call vundle#rc()
 
 Bundle "scrooloose/nerdcommenter"
 Bundle "scrooloose/nerdtree"
+Bundle "zivyangll/git-blame.vim"
 
 filetype on
