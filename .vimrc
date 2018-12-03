@@ -1,7 +1,8 @@
 " Highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+set cursorline 
+"set cursorcolumn
 
 " Leader
 let mapleader = ","
@@ -40,11 +41,11 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-let g:rehash256 = 1
+"let g:rehash256 = 1
 
-" dark colorm
-" set t_Co=256
-" set background=dark
+"dark colorm
+set t_Co=256
+set background=dark
 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -78,4 +79,15 @@ filetype plugin indent on
 
 
 map <F2> :NERDTreeToggle<CR>
+
+" refer http://www.ruanyifeng.com/blog/2018/09/vimrc.html
+set nowrap
+set showmatch
+set hlsearch
+set ignorecase
+set smartcase
+set wildmenu
+set wildmode=longest:list,full
+
+
 
