@@ -13,6 +13,7 @@ Bundle "scrooloose/nerdtree"
 Bundle "zivyangll/git-blame.vim"
 Bundle "kien/ctrlp.vim"
 Bundle "godlygeek/tabular"
-Bundle "Valloric/YouCompleteMe"
+Plugin 'majutsushi/tagbar'
+Plugin 'Lokaltog/vim-powerline'
 
 filetype on
