@@ -78,7 +78,7 @@ filetype plugin indent on
 " 插件管理器
 
 
-map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 
 " refer http://www.ruanyifeng.com/blog/2018/09/vimrc.html
 set nowrap
