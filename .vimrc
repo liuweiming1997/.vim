@@ -1,6 +1,4 @@
 " Highlight current line
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline cursorcolumn
 set cursorline 
 "set cursorcolumn
 
@@ -9,6 +7,7 @@ let mapleader = ","
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
+
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=50
@@ -29,7 +28,8 @@ set expandtab " 将Tab自动转化成空格    [需要输入真正的Tab键时�
 
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+" 显示二外的空白，头部，尾部
+set list listchars=tab:——,trail:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -146,8 +146,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "设置切换Buffer快捷键"
-nnoremap <C-tab> :bn<CR>
-nnoremap <C-s-tab> :bp<CR>
+nnoremap bn :bn<CR>
+nnoremap bp  :bp<CR>
 " 关闭状态显示空白符号计数
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'
@@ -163,4 +163,30 @@ let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
+let g:airline#extensions#tabline#enabled = 1
+
+"移动光标
+nmap lh ^
+nmap le $
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"退出写入快捷键
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+"打开侧边栏
+nnoremap <leader>f :NERDTreeToggle<CR>
+
+"没用的快捷键
+nnoremap o <ESC>
+nnoremap s <ESC>
+nnoremap a <ESC>
+nnoremap x <ESC>
+nnoremap c <ESC>
+nnoremap . <ESC>
+nnoremap a <ESC>
+nnoremap a <ESC>
+
 
