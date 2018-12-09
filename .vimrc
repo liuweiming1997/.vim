@@ -46,7 +46,7 @@ endif
 "let g:rehash256 = 1
 
 "dark colorm
-set t_Co=256
+set t_Co=256 "在windows中用xshell连接打开vim可以显示色彩
 set background=dark
 
 highlight NonText guibg=#060606
@@ -136,7 +136,7 @@ set showmatch
 set mat=2  
 
 
-let g:airline_theme="molokai"
+let g:airline_theme="bubblegum"
 
 "这个是安装字体后 必须设置此项"
 let g:airline_powerline_fonts = 1
@@ -164,6 +164,10 @@ let g:airline_right_alt_sep = '⮃'
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline#extensions#tabline#enabled = 1
+
+set encoding=utf-8
+set langmenu=zh_CN.UTF-8
+"set ambiwidth=double "防止特殊符号无法正常显示
 
 "移动光标
 nmap lh ^
