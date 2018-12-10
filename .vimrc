@@ -156,14 +156,6 @@ set guifont=Consolas\ for\ Powerline\ FixedD:h11
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
-" old vim-powerline symbols
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline#extensions#tabline#enabled = 1
 
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
@@ -181,7 +173,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 
 "打开侧边栏
-nnoremap <leader>f :NERDTreeToggle<CR>
+"nnoremap <leader>f :NERDTreeToggle<CR>
 
 "没用的快捷键
 nnoremap o <ESC>
@@ -193,4 +185,25 @@ nnoremap . <ESC>
 nnoremap a <ESC>
 nnoremap a <ESC>
 
+"Bundle 'jistr/vim-nerdtree-tabs'
+map <Leader>f <plug>NERDTreeTabsToggle<CR>
+" 是否显示隐藏文件
+let NERDTreeShowHidden=1
+" 显示书签列表
+let NERDTreeShowBookmarks=1
+" 忽略一下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 
+"nerdtree-git-plugin
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✗",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "???",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "dirty",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
