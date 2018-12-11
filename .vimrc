@@ -1,6 +1,8 @@
 " Highlight current line
 set cursorline 
 "set cursorcolumn
+hi cursorline   cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE                                                                                            
+"hi cursorcolumn   cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE
 
 " Leader
 let mapleader = ","
@@ -28,7 +30,7 @@ set expandtab " 将Tab自动转化成空格    [需要输入真正的Tab键时�
 
 
 " Display extra whitespace
-" 显示二外的空白，头部，尾部
+" 显示额外的空白，头部，尾部
 set list listchars=tab:——,trail:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -207,3 +209,13 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+
+"记住上次编辑位置                                                                 
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif      
+
+" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
+set mouse=a
+set mouse=v
+set selection=exclusive
+set selectmode=mouse,key
+
