@@ -187,6 +187,9 @@ nnoremap . <ESC>
 nnoremap a <ESC>
 nnoremap a <ESC>
 
+"nerdTree change
+nnoremap z <C-w>
+
 "Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>f <plug>NERDTreeTabsToggle<CR>
 " 是否显示隐藏文件
