@@ -180,15 +180,12 @@ nnoremap <leader>q :q<CR>
 "没用的快捷键
 nnoremap o <ESC>
 nnoremap s <ESC>
-nnoremap a <ESC>
 nnoremap x <ESC>
 nnoremap c <ESC>
 nnoremap . <ESC>
-nnoremap a <ESC>
-nnoremap a <ESC>
 
 "nerdTree change
-nnoremap z <C-w>
+nnoremap a <C-w>
 
 "Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>f <plug>NERDTreeTabsToggle<CR>
