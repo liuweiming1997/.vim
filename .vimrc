@@ -185,7 +185,7 @@ nnoremap c <ESC>
 nnoremap . <ESC>
 
 "nerdTree change
-nnoremap a <C-w>
+nnoremap <C-b> <C-w>
 
 "Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>f <plug>NERDTreeTabsToggle<CR>
