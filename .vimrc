@@ -183,6 +183,14 @@ nnoremap s <ESC>
 nnoremap x <ESC>
 nnoremap c <ESC>
 nnoremap . <ESC>
+nnoremap H <ESC>
+nnoremap J <ESC>
+nnoremap K <ESC>
+nnoremap L <ESC>
+
+
+"change it
+nnoremap U u
 
 "nerdTree change
 nnoremap <C-b> <C-w>
