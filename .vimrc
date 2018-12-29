@@ -182,6 +182,7 @@ nnoremap o <ESC>
 nnoremap s <ESC>
 nnoremap x <ESC>
 nnoremap c <ESC>
+nnoremap a <ESC>
 nnoremap . <ESC>
 nnoremap H <ESC>
 nnoremap J <ESC>
