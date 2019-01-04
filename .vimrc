@@ -228,3 +228,8 @@ set mouse=v
 set selection=exclusive
 set selectmode=mouse,key
 
+" copy and paste
+vnoremap <C-c> "+yy
+vnoremap <C-x> "+c
+nnoremap <C-v> <ESC>"+p
+
