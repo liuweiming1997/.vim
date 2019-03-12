@@ -231,6 +231,10 @@ set selectmode=mouse,key
 
 " copy and paste
 vnoremap <C-c> "+yy
+vnoremap y "+yy
 vnoremap <C-x> "+c
 nnoremap <C-v> <ESC>"+p
+
+"cancle mode
+nnoremap <C-z> <C-r>
 
