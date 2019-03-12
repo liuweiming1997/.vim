@@ -173,6 +173,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "退出写入快捷键
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>a :q!<CR>
 
 "打开侧边栏
 "nnoremap <leader>f :NERDTreeToggle<CR>
