@@ -181,7 +181,6 @@ nnoremap <leader>a :q!<CR>
 "没用的快捷键
 nnoremap o <ESC>
 nnoremap s <ESC>
-nnoremap x <ESC>
 nnoremap c <ESC>
 nnoremap a <ESC>
 nnoremap . <ESC>
@@ -237,4 +236,6 @@ nnoremap <C-v> <ESC>"+p
 
 "cancle mode
 nnoremap <C-z> <C-r>
+
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
