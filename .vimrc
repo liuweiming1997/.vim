@@ -12,7 +12,7 @@ set nobackup
 
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-set history=85
+set history=200
 set ruler         " 显示当前行号列号，在右下角
 set showcmd       " 在状态栏显示正在输入的命令  
 set laststatus=2  " Always display the status line
@@ -242,7 +242,12 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 "for vim fzf
 set rtp+=~/.fzf
 "ctrl + space
-nnoremap <NUL> <ESC>:Files<CR>
+"nnoremap <NUL> <ESC>:Files<CR>
+nnoremap <NUL> <ESC>:FZF --preview=head\ -20\ {}<CR>
 nnoremap <C-r> <ESC>:History<CR>
 "source ~/.vim/bundle/fzf.vim
 
+"some key
+"for down/up
+nnoremap <C-j> <ESC><C-S>0
+nnoremap <C-k> <ESC><C-S>9
