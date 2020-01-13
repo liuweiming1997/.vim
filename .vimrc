@@ -89,9 +89,7 @@ set smartcase
 set wildmenu
 set wildmode=longest:list,full
 
-
-
- "Tagbar
+"Tagbar
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
 let g:tagbar_right = 1
@@ -156,16 +154,12 @@ set langmenu=zh_CN.UTF-8
 nmap lh ^
 nmap le $
 
-" 让配置变更立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
 "退出写入快捷键
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>a :q!<CR>
-
-"打开侧边栏
-"nnoremap <leader>f :NERDTreeToggle<CR>
+"change U also is u
+nnoremap U u
 
 "没用的快捷键
 nnoremap o <ESC>
@@ -177,16 +171,13 @@ nnoremap H <ESC>
 nnoremap J <ESC>
 nnoremap K <ESC>
 nnoremap L <ESC>
-
-
-"change it
-nnoremap U u
+nnoremap D <ESC>
+nnoremap X <ESC>
+nnoremap C <ESC>
 
 "nerdTree change
 nnoremap <leader> <C-w>
 
-"Bundle 'jistr/vim-nerdtree-tabs'
-map <Leader>f <plug>NERDTreeTabsToggle<CR>
 " 是否显示隐藏文件
 let NERDTreeShowHidden=1
 " 显示书签列表
@@ -213,7 +204,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set mouse=a
-set mouse=v
 set selection=exclusive
 set selectmode=mouse,key
 
@@ -222,6 +212,8 @@ vnoremap <C-c> "+yy
 vnoremap y "+yy
 vnoremap <C-x> "+c
 nnoremap <C-v> <ESC>"+p
+"find the file path
+nnoremap <leader>r <ESC>:NERDTreeFind<CR>
 
 "cancle mode
 nnoremap <C-z> <C-r>
@@ -236,7 +228,28 @@ nnoremap <NUL> <ESC>:FZF --preview=head\ -20\ {}<CR>
 nnoremap <C-r> <ESC>:History<CR>
 "source ~/.vim/bundle/fzf.vim
 
-"some key
-"for down/up
-nnoremap <C-j> <ESC><C-S>0
-nnoremap <C-k> <ESC><C-S>9
+nnoremap <leader>f :call Yapf(0)<CR>
+vnoremap <leader>f :call Yapf(1)<CR>
+
+"function
+function! Yapf(visual) range
+    if expand('%') =~ '.py'
+        :w
+        if a:visual == 1
+            let f = system('yapf --style "{based_on_style: google, column_limit:100}" --lines ' . a:firstline . '-' . a:lastline . ' ' . expand('%'))
+        else
+            let f = system('yapf --style "{based_on_style: google, column_limit:100}" ' . expand('%'))
+        endif
+        if l:f =~ '^Traceback'
+            echo l:f
+            return
+        endif
+        let cp = getpos(".")
+        normal! ggdG
+        put =l:f
+        normal! ggdd
+        call setpos('.', l:cp)
+    else
+        echo 'Not py file'
+    endif
+endfunction
