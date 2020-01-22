@@ -72,7 +72,7 @@ endif
 map <F3> :NERDTreeToggle<CR>
 
 " refer http://www.ruanyifeng.com/blog/2018/09/vimrc.html
-set nowrap
+set wrap
 set showmatch
 
 "高亮search命中的文本
