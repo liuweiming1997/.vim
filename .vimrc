@@ -158,6 +158,8 @@ nmap le $
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>a :q!<CR>
+
+nnoremap <leader>t :!subl %<CR>
 "change U also is u
 nnoremap U u
 
