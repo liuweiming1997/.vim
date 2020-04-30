@@ -159,7 +159,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>a :q!<CR>
 
-nnoremap <leader>t :!subl %<CR>
+nnoremap <leader>t :!subl %<CR><CR>:q<CR>
 "change U also is u
 nnoremap U u
 
