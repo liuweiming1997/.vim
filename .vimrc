@@ -159,7 +159,10 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>a :q!<CR>
 
+" open in sublime and quit
 nnoremap <leader>t :!subl %<CR><CR>:q<CR>
+" git blame all
+nnoremap <leader>S :!git blame %<CR>
 "change U also is u
 nnoremap U u
 
