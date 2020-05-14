@@ -20,5 +20,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf.vim'
+Plugin 'morhetz/gruvbox'
 
 filetype on

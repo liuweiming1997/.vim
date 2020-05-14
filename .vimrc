@@ -212,6 +212,10 @@ set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
+" gruvbox scheme
+autocmd vimenter * colorscheme gruvbox
+set background=dark " Setting dark mode
+
 " copy and paste
 vnoremap <C-c> "+yy
 vnoremap y "+yy
