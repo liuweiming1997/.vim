@@ -118,6 +118,9 @@ let g:airline#extensions#whitespace#symbol = '!'
 nnoremap <TAB> :bn<CR>
 nnoremap <S-TAB> :bp<CR>
 
+"设置删除快捷键
+nnoremap da i<C-w><ESC>
+
 "移动光标
 nmap lh ^
 nmap le $
