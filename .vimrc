@@ -44,10 +44,6 @@ set background=dark
 "highlight NonText guibg=#060606
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Make it obvious where 100 characters, 下面哪行是显示他的边界
-set textwidth=100
-set colorcolumn=+1
-
 " Numbers
 set number
 set numberwidth=5
