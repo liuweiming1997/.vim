@@ -21,5 +21,6 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'leafgarland/typescript-vim'
 
 filetype on

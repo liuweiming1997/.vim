@@ -124,6 +124,8 @@ nnoremap da i<C-w><ESC>
 "移动光标
 nmap lh ^
 nmap le $
+nmap <C-e> $
+nmap <C-a> ^
 
 "退出写入快捷键
 nnoremap <leader>w :w<CR>
@@ -163,7 +165,7 @@ set selectmode=mouse,key
 set report=0
 
 " copy and paste
-vnoremap y "+yy
+vnoremap y "+y
 nnoremap yy "+yy
 "共享剪切板"
 set clipboard+=unnamed
