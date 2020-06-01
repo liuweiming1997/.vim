@@ -124,8 +124,6 @@ nnoremap da i<C-w><ESC>
 "移动光标
 nmap lh ^
 nmap le $
-nmap <C-e> $
-nmap <C-a> ^
 
 "退出写入快捷键
 nnoremap <leader>w :w<CR>
