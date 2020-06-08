@@ -125,6 +125,8 @@ nnoremap da i<C-w><ESC>
 nmap lh ^
 nmap le $
 
+nnoremap <leader>S : ! subl % <CR>
+
 "退出写入快捷键
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -163,10 +165,10 @@ set selectmode=mouse,key
 set report=0
 
 " copy and paste
-vnoremap y "+y
-nnoremap yy "+yy
+"vnoremap y "+y
+"nnoremap yy "+yy
 "共享剪切板"
-set clipboard+=unnamed
+set clipboard^=unnamed,unnamedplus
 
 "find the file path
 nnoremap <leader>r <ESC>:NERDTreeFind<CR>
