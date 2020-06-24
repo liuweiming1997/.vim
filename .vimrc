@@ -61,7 +61,7 @@ endif
 
 
 "设置默认换行
-set wrap
+set nowrap
 
 "输入括号的时候，帮你自动match上一个,
 "其实shift + 5就可以找回上一个了
