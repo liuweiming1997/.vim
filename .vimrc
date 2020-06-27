@@ -115,8 +115,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'
 
 "设置切换Buffer快捷键"
-nnoremap <TAB> :bn<CR>
-nnoremap <S-TAB> :bp<CR>
+nnoremap <C-PageUp> :bn<CR>
+nnoremap <C-PageDown> :bp<CR>
 
 "设置删除快捷键
 nnoremap da i<C-w><ESC>
@@ -192,14 +192,18 @@ let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
 
 " 所生成的数据文件的名称 "
 let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_file_list_command = 'fd --type f --hidden --follow --exclude .git'
 
 " 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录 "
-let s:vim_tags = expand('~/.cache/tags')
+let s:vim_tags = expand('~/.cache/ctags')
 let g:gutentags_cache_dir = s:vim_tags
 " 检测 ~/.cache/tags 不存在就新建 "
 if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
+
+nnoremap <C-i> <C-]>
+nnoremap <C-h> <C-t>
 
 " 配置 ctags 的参数 "
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
