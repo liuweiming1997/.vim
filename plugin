@@ -22,5 +22,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ludovicchabant/vim-gutentags'
 
 filetype on
