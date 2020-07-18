@@ -23,5 +23,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'zxqfl/tabnine-vim'
 
 filetype on
