@@ -27,6 +27,10 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set fileencodings=utf-8,gb18030,gbk,big5
 
+"智能缩进
+set autoindent
+set smartindent
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
