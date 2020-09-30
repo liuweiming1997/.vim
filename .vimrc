@@ -39,7 +39,8 @@ set expandtab " 将Tab自动转化成空格    [需要输入真正的Tab键时�
 
 " Display extra whitespace
 " 显示额外的空白，头部，尾部
-set list listchars=tab:——,trail:·
+"set list listchars=tab:——,trail:·
+"set list listchars=tab:--trail:·
 
 "dark colorm
 set t_Co=256 "在windows中用xshell连接打开vim可以显示色彩
@@ -146,7 +147,7 @@ let NERDTreeShowBookmarks=1
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✗",
     \ "Staged"    : "✚",
     \ "Untracked" : "???",
@@ -210,6 +211,7 @@ nnoremap <C-i> <C-]>
 nnoremap <C-h> <C-t>
 
 " 配置 ctags 的参数 "
+let g:gutentags_enabled = 1
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
